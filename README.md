@@ -55,17 +55,17 @@ MODIFIEDTIME    | Number of days to keep the logs (eg. 3 means to keep the last 
 LOGFILE         | Location of log file to be used by this script (eg. This log file can be used to check what and when the log file prefixes that has been cleaned up or deleted)
 
 #### Sample log file for "script/logscleanup.sh" (Tested with log file prefixes "yum boot choose tally last secure messages")
-\# cat logscleanup.log
-\=========================================================
-This script was executed on Wed Jul 29 18:38:19 +08 2020
-==> Output a list of log file prefixes to be cleaned up: 'yum boot choose tally last secure messages'
-Found Log Files '/var/log/yum.log' that has been modified more than 3 days ago
-Proceeding to delete log files /var/log/yum.log
-Found Log Files '/var/log/boot.log' that has been modified more than 3 days ago
-Proceeding to delete log files /var/log/boot.log
-Found Log Files '/var/log/choose_repo.log' that has been modified more than 3 days ago
-Proceeding to delete log files /var/log/choose_repo.log
-Cannot find log file prefix 'tally*' that has been modified more than 3 days ago
-Cannot find log file prefix 'last*' that has been modified more than 3 days ago
-Cannot find log file prefix 'secure*' that has been modified more than 3 days ago
-Cannot find log file prefix 'messages*' that has been modified more than 3 days ago
+\# cat logscleanup.log\
+\=========================================================\
+This script was executed on Wed Jul 29 18:38:19 +08 2020\
+==> Output a list of log file prefixes to be cleaned up: 'yum boot choose tally last secure messages'\
+Found Log Files '/var/log/yum.log' that has been modified more than 3 days ago\
+Proceeding to delete log files /var/log/yum.log\
+Found Log Files '/var/log/boot.log' that has been modified more than 3 days ago\
+Proceeding to delete log files /var/log/boot.log\
+Found Log Files '/var/log/choose_repo.log' that has been modified more than 3 days ago\
+Proceeding to delete log files /var/log/choose_repo.log\
+Cannot find log file prefix 'tally*' that has been modified more than 3 days ago\
+Cannot find log file prefix 'last*' that has been modified more than 3 days ago\
+Cannot find log file prefix 'secure*' that has been modified more than 3 days ago\
+Cannot find log file prefix 'messages*' that has been modified more than 3 days ago\
