@@ -24,17 +24,26 @@ logscleanup.sh      | scripts/logscleanup.sh        | Cleans up log files that a
 ## How to use/run
 The scripts are located under the directory "scripts". To use the scripts, check the "Required Variables" at the top of each script and modify them accordingly, the purpose of the variables are also described below.
 
-### Required variables for "script/checkApacheError.sh"
-
+### script/checkApacheError.sh
+#### Variables
 Variable Name   | Purpose            
 ----------------|--------------------------
 APACHELOGFILE   | Specify the file location of Apache log file
 MAXERRORCOUNT   | Specify the maximum number of HTTP error count before sending     
 
+#### Sample Output
+./checkApacheError.sh
+Found Apache log file
+Total HTTP 4xx error count: 328
+Total HTTP 5xx error count: 1
+Found a total of 328 HTTP 4xx status code from Apache log. Please check
+'## Summary of HTTP 4xx Errors ##
+Total Count for HTTP Error 403 => 84
+Total Count for HTTP Error 404 => 244
 
 
 ### Required variables for "script/logscleanup.sh"
-
+#### Variables
 Variable Name   | Purpose            
 ----------------|--------------------------
 LOGDIRECTORY    | Specify the directory that contains the log files to clean up
