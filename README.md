@@ -24,7 +24,7 @@ logscleanup.sh      | scripts/logscleanup.sh        | Cleans up log files that a
 ## How to use/run
 The scripts are located under the directory "scripts". To use the scripts, 
 * Copy the required scripts to the server
-* Set the script to be executable (eg. chmod +x <scriptname>)
+* Set the script to be executable (eg. chmod +x checkApacheError.sh)
 * Open the script and check the "Required Variables" at the top of each script and modify them accordingly, the purpose of the variables are also described below.
 
 
