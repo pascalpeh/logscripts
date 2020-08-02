@@ -30,10 +30,10 @@ do
                 echo "Found Log Files '$LOGFILESTOCLEANUP' that has been modified more than ${MODIFIEDTIME} days ago" | tee -a $LOGFILE
                 echo "Proceeding to delete log files $LOGFILESTOCLEANUP" | tee -a $LOGFILE
                 # Add the actual delete commands here
-                #for LF in $LOGFILESTOCLEANUP
-                #do
-                #       rm $LF
-                #done
+                for LF in $LOGFILESTOCLEANUP
+                do
+                      rm $LF
+                done
                 #OR run the following
                 #find ${LOGDIRECTORY}  -name "${LFP}*" -mtime +${MODIFIEDTIME} -exec rm -f {} \;`
         fi

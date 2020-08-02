@@ -25,12 +25,13 @@ logscleanup.sh      | scripts/logscleanup.sh        | Cleans up log files that a
 The scripts are located under the directory "scripts". To use the scripts, check the "Required Variables" at the top of each script and modify them accordingly, the purpose of the variables are also described below.
 
 ### Variables for "script/checkApacheError.sh"
+#### Variables
 Variable Name   | Purpose            
 ----------------|--------------------------
 APACHELOGFILE   | Specify the file location of Apache log file
 MAXERRORCOUNT   | Specify the maximum number of HTTP error count before sending     
 
-#### Sample Output for "script/checkApacheError.sh"
+#### Sample output for "script/checkApacheError.sh"
 \# ./checkApacheError.sh\
 Found Apache log file\
 Total HTTP 4xx error count: 328\
@@ -52,3 +53,19 @@ LOGDIRECTORY    | Specify the directory that contains the log files to clean up
 LOGFILEPREFIXES | Specify a list of log file prefixes to clean up 
 MODIFIEDTIME    | Number of days to keep the logs (eg. 3 means to keep the last 3 days of logs and purge logs older than 3 days)
 LOGFILE         | Location of log file to be used by this script (eg. This log file can be used to check what and when the log file prefixes that has been cleaned up or deleted)
+
+#### Sample log file for "script/logscleanup.sh" (Tested with log file prefixes "yum boot choose tally last secure messages")
+\# cat logscleanup.log
+\=========================================================
+This script was executed on Wed Jul 29 18:38:19 +08 2020
+==> Output a list of log file prefixes to be cleaned up: 'yum boot choose tally last secure messages'
+Found Log Files '/var/log/yum.log' that has been modified more than 3 days ago
+Proceeding to delete log files /var/log/yum.log
+Found Log Files '/var/log/boot.log' that has been modified more than 3 days ago
+Proceeding to delete log files /var/log/boot.log
+Found Log Files '/var/log/choose_repo.log' that has been modified more than 3 days ago
+Proceeding to delete log files /var/log/choose_repo.log
+Cannot find log file prefix 'tally*' that has been modified more than 3 days ago
+Cannot find log file prefix 'last*' that has been modified more than 3 days ago
+Cannot find log file prefix 'secure*' that has been modified more than 3 days ago
+Cannot find log file prefix 'messages*' that has been modified more than 3 days ago
