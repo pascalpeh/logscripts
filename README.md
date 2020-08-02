@@ -40,6 +40,9 @@ Found a total of 328 HTTP 4xx status code from Apache log. Please check\
 Total Count for HTTP Error 403 => 84\
 Total Count for HTTP Error 404 => 244\
 
+#### Use cronjob scheduler below to run the script "checkApacheError.sh" daily at 12am automatically
+crontab -e
+0 0 * * * /checkApacheError.sh
 
 ### Required variables for "script/logscleanup.sh"
 #### Variables
