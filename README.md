@@ -35,7 +35,7 @@ Variable Name   | Purpose
 APACHELOGFILE   | Specify the file location of Apache log file
 MAXERRORCOUNT   | Specify the maximum number of HTTP error count before sending     
 
-#### Sample output for "script/checkApacheError.sh"
+#### Sample output after running "script/checkApacheError.sh"
 \# ./checkApacheError.sh\
 Found Apache log file\
 Total HTTP 4xx error count: 328\
@@ -43,7 +43,7 @@ Total HTTP 5xx error count: 1\
 Found a total of 328 HTTP 4xx status code from Apache log. Please check\
 \## Summary of HTTP 4xx Errors ##\
 Total Count for HTTP Error 403 => 84\
-Total Count for HTTP Error 404 => 244\
+Total Count for HTTP Error 404 => 244
 
 #### Use cronjob scheduler below to run the script "checkApacheError.sh" daily at 12am automatically
 crontab -e
